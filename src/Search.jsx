@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import sylveon from './sylveonFace.png'
 import $ from 'jquery'
 
 class Search extends Component {
@@ -8,7 +9,7 @@ class Search extends Component {
         this.state = {
             pokemonResults: {
                 sprites: {
-                    front_default: './logo.svg'
+                    front_default: sylveon
                 } 
             }
         }
@@ -47,7 +48,7 @@ class Search extends Component {
                 <h2>
                 Your results: {this.state.pokemonResults.name}
                 </h2>
-                <img src={this.state.pokemonResults.sprites.front_default} alt="pokemon search result!" />
+                <img src={this.state.pokemonResults.sprites.front_default} alt="pokemon search result!" width="250" height="200" />
             </div>
         )
     }

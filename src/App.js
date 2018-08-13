@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>trans pokemon app!!!!</h1>
+        <h1>are all pokemon trans?</h1>
         <Search />
       </div>
     );

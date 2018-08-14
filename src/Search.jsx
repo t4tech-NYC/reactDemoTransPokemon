@@ -11,10 +11,11 @@ export default class Search extends React.Component {
     }
 
     componentWillMount(){
-        axios.get('https://pokeapi.co/api/v2/pokemon/200').then((response) => {
+        axios.get('http://pokeapi.salestock.net/api/v2/pokemon/20').then((response) => {
         this.setState({
-            receivedPokemon: response
+            receivedPokemon: response.data.name
         })
+        console.log('hey here is the result : ', response.data.name)
     })
     }
 

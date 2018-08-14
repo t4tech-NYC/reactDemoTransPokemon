@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Search from './Search'
 
 class App extends Component {
   constructor(props){
@@ -13,7 +14,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>header</h1>
+        <h1>are all pokemon trans?</h1>
+        <Search />
       </div>
     );
   }

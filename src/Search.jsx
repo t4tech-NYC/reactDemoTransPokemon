@@ -6,19 +6,22 @@ export default class Search extends React.Component {
         super(props)
 
         this.state = {
-
+            receivedPokemon: 'hello'
         }
     }
 
-    axios.get('https://pokeapi.co/api/v2/pokemon/200', (response) => {
+    componentWillMount(){
+        axios.get('https://pokeapi.co/api/v2/pokemon/200').then((response) => {
         this.setState({
-            response: response
+            receivedPokemon: response
         })
-    });
+    })
+    }
 
     render() {
         return(
             <div>
+                {this.state.receivedPokemon}
                 <form>
                     <input type="text" placeholder="insert number here" />
                     <button>Submit </button>
